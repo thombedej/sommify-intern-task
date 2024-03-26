@@ -1,0 +1,142 @@
+@font-face {
+  font-family: 'Mona Sans';
+  src: url('../fonts/Mona-Sans.woff2') format('woff2 supports variations'),
+    url('../fonts/Mona-Sans.woff2') format('woff2-variations');
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+}
+
+@font-face {
+  font-family: 'Hubot Sans';
+  src: url('../fonts/Hubot-Sans.woff2') format('woff2 supports variations'),
+    url('../fonts/Hubot-Sans.woff2') format('woff2-variations');
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+}
+
+:root {
+  // font-family: Inter, sans-serif;
+  font-family: Mona Sans, sans-serif !important;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  font-family: Mona Sans, sans-serif !important;
+}
+
+.footer {
+  opacity: 0.66;
+  letter-spacing: 0.035rem;
+}
+.footer a {
+  color: black;
+}
+
+body,
+html,
+#root {
+  margin: 0;
+  height: 100%;
+  font-family: Mona Sans, sans-serif;
+  background: #fff;
+}
+
+h1 {
+  margin: 0;
+  font-size: 3.5rem;
+  line-height: 1.1;
+  letter-spacing: -0.06rem;
+  font-weight: 800;
+}
+
+h3 {
+  line-height: 1.1;
+  color: #d11174;
+  margin: 0;
+  font-size: 1.7rem;
+}
+
+h5 {
+  // all caps
+  // text-transform: uppercase;
+  font-weight: 700;
+  margin: 0;
+  margin-top: 0.5rem;
+  margin-bottom: 0.2rem;
+  opacity: 0.66;
+  font-size: 1rem;
+}
+
+h4 {
+  font-weight: 500;
+  font-size: 1.25rem;
+  margin: 0;
+  line-height: 1.1;
+}
+
+p {
+  letter-spacing: 0.05rem;
+  opacity: 0.66;
+  margin-top: 0;
+}
+
+.font-mono {
+  font-family: 'Roboto Mono', monospace !important;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.hubot-sans {
+  font-family: 'Hubot Sans', sans-serif !important;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+
+@media (max-width: 1100px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
+  h4 {
+    font-size: 1.1rem;
+  }
+}
+
+// adjust font sizes
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
+  h4 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.1rem;
+  }
+  h4 {
+    font-size: 1.1rem;
+  }
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg id="svg10" version="1.1" width="100" height="406.01904"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+   <metadata id="metadata16">
+      <rdf:RDF>
+         <cc:Work rdf:about="">
+            <dc:format>image/svg+xml</dc:format>
+            <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+            <dc:title />
+         </cc:Work>
+      </rdf:RDF>
+   </metadata>
+   <defs id="defs14" />
+   <g class="shimmer">
+      <rect style="fill:#000000;stroke:none" id="rect20" width="100" height="234.92253" x="0" y="145.35161" />
+      <rect style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" id="rect22" width="100" height="41.299168" x="0" y="364.71988" ry="10" rx="20" />
+      <ellipse style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.01774" id="path24" cx="50" cy="144.54707" rx="50" ry="32.449345" />
+      <rect style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" id="rect26" width="38.081047" height="127.65197" x="30.959473" y="0" rx="10" ry="5" />
+      <rect style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" id="rect28" width="41.597069" height="23.283083" x="29.201462" y="8.3777161" rx="5" ry="5.0000005" />
+   </g>
+</svg>
