@@ -1,11 +1,11 @@
-import Logo from '../assets/brand/sommify.svg';
-import { products } from '../components/Header';
-import { motion } from 'framer-motion';
-import { FaCaretRight, FaChevronLeft, FaChevronRight } from 'react-icons/fa6';
-import { useState } from 'react';
-import { useNavigate } from 'react-router';
-import { useDimensions } from '../hooks';
-import ButtonHomepage from '../components/ButtonHomepage';
+import Logo from "../assets/brand/sommify.svg";
+import { products } from "../components/Header";
+import { motion } from "framer-motion";
+import { FaCaretRight, FaChevronLeft, FaChevronRight } from "react-icons/fa6";
+import { useState } from "react";
+import { useNavigate } from "react-router";
+import { useDimensions } from "../hooks";
+import ButtonHomepage from "../components/ButtonHomepage";
 
 const ProductCard = ({ label, path, icon, description, index, beta }) => {
   const [hover, setHover] = useState(false);
@@ -17,20 +17,20 @@ const ProductCard = ({ label, path, icon, description, index, beta }) => {
     <motion.div
       style={{
         borderRadius: 16,
-        border: '1px solid #efefef',
-        boxShadow: '3px 3px 6px -2px #2a2a2a40',
-        width: 'calc(100% - 40px)',
+        border: "1px solid #efefef",
+        boxShadow: "3px 3px 6px -2px #2a2a2a40",
+        width: "calc(100% - 40px)",
         height: isMobile ? 70 : 80,
         marginBottom: isMobile ? 10 : 16,
-        padding: '0 20px',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'start',
+        padding: "0 20px",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "start",
         fontSize: 16,
-        position: 'relative',
-        cursor: 'pointer',
+        position: "relative",
+        cursor: "pointer",
         // gradient that goes from #fff at 75% to #F9F9F9
-        background: 'linear-gradient(180deg, #fff 75%, #fafbfc)',
+        background: "linear-gradient(180deg, #fff 75%, #fafbfc)",
       }}
       initial={{
         opacity: 0,
@@ -43,7 +43,7 @@ const ProductCard = ({ label, path, icon, description, index, beta }) => {
       transition={{
         delay: index * 0.1,
         duration: 0.5,
-        ease: 'easeInOut',
+        ease: "easeInOut",
       }}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
@@ -52,13 +52,13 @@ const ProductCard = ({ label, path, icon, description, index, beta }) => {
       <div
         style={{
           flex: 1,
-          display: 'flex',
-          flexDirection: 'column',
-          overflow: 'hidden',
-          textOverflow: 'ellipsis',
-          whiteSpace: 'nowrap',
-          justifyContent: 'center',
-          height: '100%',
+          display: "flex",
+          flexDirection: "column",
+          overflow: "hidden",
+          textOverflow: "ellipsis",
+          whiteSpace: "nowrap",
+          justifyContent: "center",
+          height: "100%",
           fontSize: isMobile ? 14 : 16,
         }}
       >
@@ -74,8 +74,8 @@ const ProductCard = ({ label, path, icon, description, index, beta }) => {
             <span
               style={{
                 marginLeft: 8,
-                fontSize: '0.75em',
-                color: '#FFA500',
+                fontSize: "0.75em",
+                color: "#FFA500",
               }}
             >
               beta
@@ -85,7 +85,7 @@ const ProductCard = ({ label, path, icon, description, index, beta }) => {
         <div
           style={{
             fontWeight: 300,
-            color: '#B3B3BD',
+            color: "#B3B3BD",
             minWidth: 0,
           }}
         >
@@ -97,10 +97,10 @@ const ProductCard = ({ label, path, icon, description, index, beta }) => {
         initial={false}
         animate={{
           opacity: hover ? 0.45 : 0.2,
-          display: 'flex',
-          alignItems: 'center',
+          display: "flex",
+          alignItems: "center",
           paddingLeft: 16,
-          height: '100%',
+          height: "100%",
         }}
       >
         <FaCaretRight
@@ -120,45 +120,45 @@ export default function Home({}) {
     <div
       style={{
         minHeight: height,
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
         width: 420,
-        margin: 'auto',
-        maxWidth: '80vw',
-        color: '#28333C',
+        margin: "auto",
+        maxWidth: "80vw",
+        color: "#28333C",
       }}
     >
       <div
         style={{
-          display: 'flex',
+          display: "flex",
           marginTop: 50,
         }}
       >
         <img
           src={Logo}
-          alt='Logo'
+          alt="Logo"
           style={{
             height: 25,
-            filter: 'brightness(0)',
+            filter: "brightness(0)",
           }}
         />
       </div>
+      <h2>Try our products</h2>
       <motion.div
         style={{
-          display: 'flex',
-          marginTop: 'auto',
-          flexDirection: 'column',
-          alignItems: 'center',
-          width: '100%',
-          marginBottom: isMobile ? 'auto' : 10,
+          display: "flex",
+          // marginTop: "auto",
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "center",
+          width: "100%",
+          marginBottom: isMobile ? "auto" : 10,
         }}
       >
-        <h2>Try our products</h2>
-
         {products.map(({ label, path, icon, description, beta }, index) => (
           <ProductCard
-            key={'product_' + index}
+            key={"product_" + index}
             label={label}
             path={path}
             icon={icon}
@@ -170,17 +170,17 @@ export default function Home({}) {
       </motion.div>
       <div
         style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          marginBottom: isMobile ? '5vh' : 'auto',
-          width: 'calc(100% - 40px)',
+          display: "flex",
+          justifyContent: "space-between",
+          marginBottom: isMobile ? "5vh" : "auto",
+          width: "calc(100% - 40px)",
           paddingInline: 20,
         }}
       >
         <ButtonHomepage
           transparent
           onClick={() => {
-            window.open('https://sommify.ai', '_blank');
+            window.open("https://sommify.ai", "_blank");
           }}
         >
           <FaChevronLeft style={{ marginRight: 4 }} /> Main page
@@ -189,7 +189,7 @@ export default function Home({}) {
         <ButtonHomepage
           transparent
           onClick={() => {
-            window.open('https://docs.sommify.ai', '_blank');
+            window.open("https://docs.sommify.ai", "_blank");
           }}
         >
           Read docs <FaChevronRight style={{ marginLeft: 4 }} />
