@@ -1,7 +1,7 @@
 import Logo from "../assets/brand/sommify.svg";
 import { products } from "../components/Header";
 import { motion } from "framer-motion";
-import { FaCaretRight, FaChevronLeft, FaChevronRight } from "react-icons/fa6";
+import { FaArrowRight, FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import { useDimensions } from "../hooks";
@@ -105,10 +105,10 @@ const ProductCard = ({ label, path, icon, description, index, beta }) => {
           alignItems: "start",
           paddingLeft: 16,
           paddingTop: 15,
-          height: "100%",
+          height: "5%",
         }}
       >
-        <FaCaretRight
+        <FaArrowRight
           style={{
             fontSize: 20,
           }}
@@ -149,7 +149,7 @@ export default function Home({}) {
           }}
         />
       </div>
-      <h2>Try our products</h2>
+
       <motion.div
         style={{
           display: "flex",
