@@ -88,8 +88,9 @@ const ProductCard = ({ label, path, icon, description, index, beta }) => {
         <div
           style={{
             fontWeight: 300,
+            textWrap: "balance",
             color: "#B3B3BD",
-            minWidth: 0,
+            minWidth: "100%",
             paddingTop: 10,
           }}
         >
@@ -146,6 +147,7 @@ export default function Home({}) {
           style={{
             height: 25,
             filter: "brightness(0)",
+            marginBottom: "20px",
           }}
         />
       </div>
