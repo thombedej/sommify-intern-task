@@ -20,7 +20,9 @@ const ProductCard = ({ label, path, icon, description, index, beta }) => {
         border: "1px solid #efefef",
         boxShadow: "3px 3px 6px -2px #2a2a2a40",
         width: "calc(100% - 40px)",
+        width: "268px",
         height: isMobile ? 70 : 80,
+        height: "300px",
         marginBottom: isMobile ? 10 : 16,
         padding: "0 20px",
         display: "flex",
@@ -54,10 +56,11 @@ const ProductCard = ({ label, path, icon, description, index, beta }) => {
           flex: 1,
           display: "flex",
           flexDirection: "column",
+          paddingTop: 15,
           overflow: "hidden",
           textOverflow: "ellipsis",
           whiteSpace: "nowrap",
-          justifyContent: "center",
+          justifyContent: "flex-start",
           height: "100%",
           fontSize: isMobile ? 14 : 16,
         }}
@@ -87,6 +90,7 @@ const ProductCard = ({ label, path, icon, description, index, beta }) => {
             fontWeight: 300,
             color: "#B3B3BD",
             minWidth: 0,
+            paddingTop: 10,
           }}
         >
           {description.toLowerCase()}
@@ -98,8 +102,9 @@ const ProductCard = ({ label, path, icon, description, index, beta }) => {
         animate={{
           opacity: hover ? 0.45 : 0.2,
           display: "flex",
-          alignItems: "center",
+          alignItems: "start",
           paddingLeft: 16,
+          paddingTop: 15,
           height: "100%",
         }}
       >
@@ -148,6 +153,7 @@ export default function Home({}) {
       <motion.div
         style={{
           display: "flex",
+          gap: "1rem",
           // marginTop: "auto",
           flexDirection: "row",
           alignItems: "center",
