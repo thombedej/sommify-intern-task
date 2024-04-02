@@ -67,6 +67,8 @@ const ProductCard = ({ label, path, icon, description, index, beta }) => {
       >
         <div
           style={{
+            display: "flex",
+            alignItems: "center",
             fontWeight: 600,
           }}
         >
@@ -76,6 +78,8 @@ const ProductCard = ({ label, path, icon, description, index, beta }) => {
           {beta && (
             <span
               style={{
+                display: "flex",
+                alignItems: "end",
                 marginLeft: 8,
                 fontSize: "0.75em",
                 color: "#FFA500",
@@ -84,6 +88,22 @@ const ProductCard = ({ label, path, icon, description, index, beta }) => {
               beta
             </span>
           )}
+          <motion.div
+            initial={false}
+            animate={{
+              opacity: hover ? 0.45 : 0.2,
+              display: "flex",
+              alignItems: "center",
+              paddingLeft: 16,
+              height: "5%",
+            }}
+          >
+            <FaArrowRight
+              style={{
+                fontSize: 20,
+              }}
+            />
+          </motion.div>
         </div>
         <div
           style={{
@@ -97,24 +117,6 @@ const ProductCard = ({ label, path, icon, description, index, beta }) => {
           {description.toLowerCase()}
         </div>
       </div>
-
-      <motion.div
-        initial={false}
-        animate={{
-          opacity: hover ? 0.45 : 0.2,
-          display: "flex",
-          alignItems: "start",
-          paddingLeft: 16,
-          paddingTop: 15,
-          height: "5%",
-        }}
-      >
-        <FaArrowRight
-          style={{
-            fontSize: 20,
-          }}
-        />
-      </motion.div>
     </motion.div>
   );
 };
@@ -156,7 +158,7 @@ export default function Home({}) {
         style={{
           display: "flex",
           gap: "1rem",
-          // marginTop: "auto",
+
           flexDirection: "row",
           alignItems: "center",
           justifyContent: "center",
