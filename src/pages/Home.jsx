@@ -16,13 +16,11 @@ const ProductCard = ({ label, path, icon, description, index, beta }) => {
   return (
     <motion.div
       style={{
-        borderRadius: 16,
-        border: "1px solid #efefef",
-        boxShadow: "3px 3px 6px -2px #2a2a2a40",
-        width: "calc(100% - 40px)",
-        width: "268px",
-        height: isMobile ? 70 : 80,
-        height: "300px",
+        borderRadius: 6,
+        // border: "1px solid #efefef",
+        // boxShadow: "3px 3px 6px -2px #2a2a2a40",
+        width: 268,
+        height: 300,
         marginBottom: isMobile ? 10 : 16,
         padding: "0 20px",
         display: "flex",
@@ -32,7 +30,8 @@ const ProductCard = ({ label, path, icon, description, index, beta }) => {
         position: "relative",
         cursor: "pointer",
         // gradient that goes from #fff at 75% to #F9F9F9
-        background: "linear-gradient(180deg, #fff 75%, #fafbfc)",
+        // background: "linear-gradient(180deg, #fff 75%, #fafbfc)",
+        background: "#f6f6f6",
       }}
       initial={{
         opacity: 0,
@@ -70,6 +69,7 @@ const ProductCard = ({ label, path, icon, description, index, beta }) => {
             display: "flex",
             alignItems: "center",
             fontWeight: 600,
+            color: hover ? "blue" : "inherit",
           }}
         >
           {icon}
@@ -158,7 +158,6 @@ export default function Home({}) {
         style={{
           display: "flex",
           gap: "1rem",
-
           flexDirection: "row",
           alignItems: "center",
           justifyContent: "center",
