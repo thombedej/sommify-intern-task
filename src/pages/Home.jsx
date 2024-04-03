@@ -1,7 +1,7 @@
 import Logo from "../assets/brand/sommify.svg";
 import { products } from "../components/Header";
 import { motion } from "framer-motion";
-import { FaCaretRight, FaChevronLeft, FaChevronRight } from "react-icons/fa6";
+import { FaArrowRight, FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import { useDimensions } from "../hooks";
@@ -16,11 +16,11 @@ const ProductCard = ({ label, path, icon, description, index, beta }) => {
   return (
     <motion.div
       style={{
-        borderRadius: 16,
-        border: "1px solid #efefef",
-        boxShadow: "3px 3px 6px -2px #2a2a2a40",
-        width: "calc(100% - 40px)",
-        height: isMobile ? 70 : 80,
+        borderRadius: 6,
+        // border: "1px solid #efefef",
+        // boxShadow: "3px 3px 6px -2px #2a2a2a40",
+        width: 268,
+        height: 300,
         marginBottom: isMobile ? 10 : 16,
         padding: "0 20px",
         display: "flex",
@@ -30,7 +30,8 @@ const ProductCard = ({ label, path, icon, description, index, beta }) => {
         position: "relative",
         cursor: "pointer",
         // gradient that goes from #fff at 75% to #F9F9F9
-        background: "linear-gradient(180deg, #fff 75%, #fafbfc)",
+        // background: "linear-gradient(180deg, #fff 75%, #fafbfc)",
+        background: "#f6f6f6",
       }}
       initial={{
         opacity: 0,
@@ -54,17 +55,21 @@ const ProductCard = ({ label, path, icon, description, index, beta }) => {
           flex: 1,
           display: "flex",
           flexDirection: "column",
+          paddingTop: 15,
           overflow: "hidden",
           textOverflow: "ellipsis",
           whiteSpace: "nowrap",
-          justifyContent: "center",
+          justifyContent: "flex-start",
           height: "100%",
           fontSize: isMobile ? 14 : 16,
         }}
       >
         <div
           style={{
+            display: "flex",
+            alignItems: "center",
             fontWeight: 600,
+            color: hover ? "blue" : "inherit",
           }}
         >
           {icon}
@@ -73,6 +78,8 @@ const ProductCard = ({ label, path, icon, description, index, beta }) => {
           {beta && (
             <span
               style={{
+                display: "flex",
+                alignItems: "end",
                 marginLeft: 8,
                 fontSize: "0.75em",
                 color: "#FFA500",
@@ -81,34 +88,35 @@ const ProductCard = ({ label, path, icon, description, index, beta }) => {
               beta
             </span>
           )}
+          <motion.div
+            initial={false}
+            animate={{
+              opacity: hover ? 0.45 : 0.2,
+              display: "flex",
+              alignItems: "center",
+              paddingLeft: 16,
+              height: "5%",
+            }}
+          >
+            <FaArrowRight
+              style={{
+                fontSize: 20,
+              }}
+            />
+          </motion.div>
         </div>
         <div
           style={{
             fontWeight: 300,
+            textWrap: "balance",
             color: "#B3B3BD",
-            minWidth: 0,
+            minWidth: "100%",
+            paddingTop: 10,
           }}
         >
           {description.toLowerCase()}
         </div>
       </div>
-
-      <motion.div
-        initial={false}
-        animate={{
-          opacity: hover ? 0.45 : 0.2,
-          display: "flex",
-          alignItems: "center",
-          paddingLeft: 16,
-          height: "100%",
-        }}
-      >
-        <FaCaretRight
-          style={{
-            fontSize: 20,
-          }}
-        />
-      </motion.div>
     </motion.div>
   );
 };
@@ -141,14 +149,15 @@ export default function Home({}) {
           style={{
             height: 25,
             filter: "brightness(0)",
+            marginBottom: "20px",
           }}
         />
       </div>
-      <h2>Try our products</h2>
+
       <motion.div
         style={{
           display: "flex",
-          // marginTop: "auto",
+          gap: "1rem",
           flexDirection: "row",
           alignItems: "center",
           justifyContent: "center",
